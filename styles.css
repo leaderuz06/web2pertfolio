@@ -18,8 +18,8 @@ section{
 
 header{
     position: fixed;
-    /* background: rgba(255, 255, 255, .2); */
-    background: crimson;
+    background: rgba(255, 255, 255, .2);
+    /* background: crimson; */
     top: 0;
     left: 0;
     width: 100%;
@@ -460,8 +460,107 @@ header .navigation a:hover{
 
 .contact .card:hover .contact-icon{
     transform: translateY(-20px);
+}              
+
+.contact .card .info h3{
+    color: #111;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.contact .card .info span{
+    color: #666;
+    font-weight: 500; 
+}
+
+.contact-form{
+    background-color: #fff;
+    max-width: 600px;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+}
+
+.contact-form h3{
+    color: #111;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form .input-box{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+} 
+
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+    color: #111;
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #111;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-form .input-box .send-btn{
+    color: #fff;
+    background-color: crimson;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+}
+
+.contact-form .input-box .send-btn:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #111;
+}
+/* contact section end  */
+
+/* footer section start  */
+
+.footer{
+    background-color: #000016;
+    color: #fff;
+    text-align: center;
+    padding: 35px;
+}
+
+.footer .footer-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer p{
+    margin-top: 10px;
+}
+/* footer section end  */
+
+/* responsive styles start   */
+
+@media(max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+
+    header .navigation{
+        display: none;
+    }
 }
 
 
 
-/* contact section end  */
