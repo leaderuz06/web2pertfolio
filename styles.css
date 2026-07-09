@@ -30,6 +30,11 @@ header{
     z-index: 999;
 }
 
+header.sticky{
+    background-color: crimson;
+    padding: 10px 100px;
+}
+
 header .brand{
     color: #fff;
     font-size: 32px;
@@ -52,7 +57,7 @@ header .navigation a{
 }
 
 header .navigation a:hover{
-    color: crimson;
+    color: #666 ;
 }
 
 /* main section start  */
@@ -557,10 +562,144 @@ header .navigation a:hover{
         padding: 12px 20px;
     }
 
+    header.sticky{
+        padding: 10px 20px;
+    }
+
     header .navigation{
         display: none;
     }
+
+    header .navigation.active{
+        z-index: 888;
+        position: fixed;
+        background: #fff;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+        transition: 0.3s ease;
+    }
+
+    header .navigation a{
+        color: #000;
+        font-size: 22px;
+        margin: 10px;
+        padding: 0 20px;
+        border-radius: 20px;
+    }
+
+    header .navigation a:hover{
+        background-color: crimson;
+        color: #fff;
+    }
+
+    .menu-btn{
+        position: absolute;
+        background: url(images/menu.png) no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        cursor: pointer;
+        margin: 0 20px;
+        transition: .4 ease;
+        filter: invert(1);
+    }
+
+    .menu-btn.active{
+        z-index: 999;
+        background: url(images/close.png) no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: .3s ease;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main .content h2{
+        font-size: 25px;
+    }
+
+    .main .content h3{
+        font-size: 35px;
+    }
+
+    .section-title{
+        font-size: 36px;
+    }
+
+    .about .content {
+        flex-direction: column;
+    }
+
+    .about .content .column{
+        position: relative;
+        width: 100%;
+    }
+    .about .content .col-right{
+        margin-top: 40px;
+    }
+
+    .skills .content{
+        flex-direction: column;
+    }
+
+    .skills .content .column{
+        position: relative;
+        width: 100%;
+    }
+    .skills .content .col-right{
+        margin-top: 40px;
+    }
+
+    .contact-form{
+        padding: 35px 40px;
+    }
 }
 
+
+.scrolToTop-btn{
+    z-index: 999;
+    position: fixed;
+    background-color: crimson;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    right: 0;
+    bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.scrolToTop-btn.active{
+    right: 20px;
+    opacity: 1;
+}
+
+.reveal{
+    position: relative;
+    transform: translate(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    transform: translate(0);
+    opacity: 1;
+}
 
 
